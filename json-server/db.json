@@ -1,0 +1,404 @@
+{
+	"portfolio": [
+		{
+			"id": 1,
+			"title": "App Redesign",
+			"image": "/img/case-1.jpg",
+			"categories": ["App Design", "UI/UX"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 2,
+			"title": "Revitalizing a Classic Brand",
+			"image": "/img/case-2.jpg",
+			"categories": ["Branding", "Web Design"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 3,
+			"title": "Brand Refresh",
+			"image": "/img/case-3.jpg",
+			"categories": ["UI/UX"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 4,
+			"title": "STU Digital Experience",
+			"image": "/img/case-4.jpg",
+			"categories": ["SEO", "Branding"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 5,
+			"title": "E-Commerce Website",
+			"image": "/img/case-5.jpg",
+			"categories": ["Web Design", "E-Commerce"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 6,
+			"title": "Mobile App Development",
+			"image": "/img/case-6.jpg",
+			"categories": ["Mobile", "UI/UX"],
+			"projectLink": "/portfolio-single"
+		},
+		{
+			"id": 7,
+			"title": "Corporate Branding Strategy",
+			"image": "/img/case-7.jpg",
+			"categories": ["Branding", "Strategy"],
+			"projectLink": "/portfolio-single"
+		}
+	],
+	"filters": [
+		{
+			"id": "all",
+			"label": "All",
+			"value": "all",
+			"count": 7
+		},
+		{
+			"id": "branding",
+			"label": "Branding",
+			"value": "branding",
+			"count": 4
+		},
+		{
+			"id": "ui-ux",
+			"label": "UI/UX",
+			"value": "ui-ux",
+			"count": 3
+		},
+		{
+			"id": "app-design",
+			"label": "App Design",
+			"value": "app-design",
+			"count": 5
+		}
+	],
+	"singlePortfolio": {
+		"id": 1,
+		"title": "Branding and Website Redesign for Aurora Tech",
+		"date": "January 20, 2025",
+		"categories": ["App Design", "UI/UX"],
+		"description": "Aurora Tech, a rapidly growing tech company, approached me to redefine their brand identity and completely redesign their website. The goal was to modernize their digital presence to better reflect their innovative solutions while creating a seamless and engaging user experience.",
+		"task": "Transform brand identity with a cohesive brand refresh and a cutting-edge website redesign to drive innovation and engagement.",
+		"role": ["App Design", "UI/UX"],
+		"client": "Aurora Tech",
+		"categoryYear": "Brand Identity ©2025",
+		"liveSite": "/#",
+		"gallery": [
+			"/img/case-1.jpg",
+			"/img/case-2.jpg",
+			"/img/case-3.jpg"
+		]
+	},
+	"skills": {
+		"title": "Crafting Unique Skills",
+		"items": [
+		{
+			"icon": "bi bi-app-indicator",
+			"value": "10+",
+			"label": "years of experience",
+			"description": "From startups to established brands, helping them achieve their digital goals."
+		},
+		{
+			"icon": "bi bi-layers-half",
+			"value": "6k",
+			"label": "clients worldwide",
+			"description": "Worked with a variety of clients, from startups to established brands, helping them achieve their digital goals."
+		},
+		{
+			"icon": "bi bi-intersect",
+			"value": "12+",
+			"label": "awards achieved",
+			"description": "Collaborative and client-focused, ensuring that every project reflects the unique vision."
+		}
+		],
+		"skillsProgress": [
+		{
+			"title": "UI Design & Development",
+			"progress": 94
+		}
+		]
+	},
+	"awards": {
+		"title": "Awards & Recognition",
+		"items": [
+			{
+			"title": "Best User Experience",
+			"year": "2021",
+			"award": "Webby Awards",
+			"link": "/about"
+			},
+			{
+			"title": "Honorable Mention",
+			"year": "2022",
+			"award": "Awwwards",
+			"link": "/about"
+			},
+			{
+			"title": "Best UI Design",
+			"year": "2023",
+			"award": "CSS Design Awards",
+			"link": "/about"
+			},
+			{
+			"title": "Awards of The Year",
+			"year": "2025",
+			"award": "Honor of Awards",
+			"link": "/about"
+			}
+		]
+	},
+	"awardstwo": {
+		"title": "Awards & Recognition",
+		"items": [
+		{
+			"image": "/img/award-1.png",
+			"description": "Recognized for the outstanding UX design of the e-commerce platform, reflecting my commitment to user-centered design.",
+			"link": "/about"
+		},
+		{
+			"image": "/img/award-2.png",
+			"description": "Honorable mention for the innovative design and functionality of the website, highlighting my ability to blend creativity.",
+			"link": "/about"
+		},
+		{
+			"image": "/img/award-3.png",
+			"description": "Awarded for the sleek and intuitive UI of personal portfolio website, showcasing my skill in creating aesthetics.",
+			"link": "/about"
+		}
+		]
+	},
+	"cta": {
+		"sub_title": "Want to collaborate?",
+		"title": "Let's Create Something",
+		"highlight": "Together",
+		"button": {
+			"text": "Get In Touch!",
+			"link": "contact",
+			"icon": "bi bi-arrow-right"
+		},
+		"socials": [
+			{
+			"name": "Instagram",
+			"link": "/#"
+			},
+			{
+			"name": "Twitter",
+			"link": "/#"
+			},
+			{
+			"name": "LinkedIn",
+			"link": "/#"
+			}
+		]
+	},
+	"blog": [
+		{
+		"id": 1,
+		"title": "The Future of Digital Design - Trends to Watch",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-1.jpg",
+		"link": "blog-single",
+		"categories": ["Branding", "Design", "Trends"]
+		},
+		{
+		"id": 2,
+		"title": "Building User Trust Through Thoughtful UI/UX Design",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-2.jpg",
+		"link": "blog-single",
+		"categories": ["UI/UX", "Software"]
+		},
+		{
+		"id": 3,
+		"title": "The Role of Color Psychology in Effective Branding",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-3.jpg",
+		"link": "blog-single",
+		"categories": ["Design", "Branding", "Technology"]
+		},
+		{
+		"id": 4,
+		"title": "Top 5 Tools for Web Developers",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-4.jpg",
+		"link": "blog-single",
+		"categories": ["Web Design", "Tools"]
+		},
+		{
+		"id": 5,
+		"title": "How to Integrate User Experience (UX) into Web Development",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-5.jpg",
+		"link": "blog-single",
+		"categories": ["UI/UX", "Trends"]
+		},
+		{
+		"id": 6,
+		"title": "How to Improve Your Website's SEO",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-6.jpg",
+		"link": "blog-single",
+		"categories": ["SEO", "Minimalism", "Design"]
+		},
+		{
+		"id": 7,
+		"title": "Why Minimalist Design is the Key to a Clean and Effective Website",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-7.jpg",
+		"link": "blog-single",
+		"categories": ["Branding", "Design", "Minimalism"]
+		},
+		{
+		"id": 8,
+		"title": "Building a Strong Brand Identity - Key Elements and Strategies",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-8.jpg",
+		"link": "blog-single",
+		"categories": ["Design", "Trends"]
+		},
+		{
+		"id": 9,
+		"title": "The Impact of Typography on User Experience and Brand Perception",
+		"date": "January 20, 2025",
+		"author": "Themeland",
+		"image": "/img/blog-9.jpg",
+		"link": "blog-single",
+		"categories": ["UI/UX", "Typography"]
+		}
+	],
+	"pagination": {
+		"currentPage": 1,
+		"totalPages": 2
+	},
+	"blogSingle": [
+		{
+		"id": 1,
+		"title": "The Future of Digital Design - Trends to Watch",
+		"author": "Themeland",
+		"date": "January 20, 2025",
+		"content": [
+			{
+			"type": "paragraph",
+			"text": "As we approach the next phase of digital transformation, it's clear that the world of digital design is undergoing a dramatic evolution. The future of digital design will be shaped by emerging technologies, shifting user expectations, and the growing need for seamless, intuitive user experiences."
+			},
+			{
+			"type": "paragraph",
+			"text": "Digital design has always been at the forefront of innovation, constantly adapting to new technologies and user demands. As we move into 2025, designers must stay agile, leveraging the latest tools and trends to create compelling, user-centered experiences."
+			},
+			{
+			"type": "image",
+			"src": "/img/blog-single.jpg",
+			"alt": "Digital Design"
+			},
+			{
+			"type": "heading",
+			"text": "Minimalism with a Purpose"
+			},
+			{
+			"type": "paragraph",
+			"text": "The less is more philosophy has been a popular design principle for some time now, but in 2025, minimalism will be more purposeful than ever. Designers are focusing on streamlining interfaces, reducing cognitive load, and making every design element count."
+			},
+			{
+			"type": "list",
+			"items": [
+				"Improves page load times, enhancing SEO and user experience.",
+				"Reduces distractions, leading to higher engagement.",
+				"Aligns with the rise of mobile-first design."
+			]
+			},
+			{
+			"type": "heading",
+			"text": "AI-Driven Design"
+			},
+			{
+			"type": "paragraph",
+			"text": "Artificial Intelligence is transforming the way designers work. From generating design mockups to personalizing user experiences, AI is becoming an integral part of the design process."
+			},
+			{
+			"type": "blockquote",
+			"text": "\"AI is no longer just a tool for automation — it's becoming a creative partner, assisting in everything from layout generation to user testing.\""
+			},
+			{
+			"type": "heading",
+			"text": "3D and Immersive Design"
+			},
+			{
+			"type": "paragraph",
+			"text": "With the rise of virtual and augmented reality, 3D and immersive designs are becoming more prominent. This trend allows users to engage more deeply with digital interfaces and content, creating experiences that feel more tangible and lifelike."
+			},
+			{
+			"type": "heading",
+			"text": "Code Example for CSS 3D Animation"
+			},
+			{
+			"type": "code",
+			"text": ".box {\n  width: 200px;\n  height: 200px;\n  background-color: #3498db;\n  transform: rotateY(45deg);\n  transition: transform 0.5s ease;\n}\n\n.box:hover {\n  transform: rotateY(360deg);\n}"
+			},
+			{
+			"type": "heading",
+			"text": "Data-Driven Design Decisions"
+			},
+			{
+			"type": "paragraph",
+			"text": "Designers are increasingly relying on data to make more informed design decisions. By utilizing tools like heatmaps, user analytics, and A/B testing, they can create designs that are both visually appealing and functional."
+			},
+			{
+			"type": "table",
+			"headers": ["Benefit", "Description"],
+			"rows": [
+				["Personalization", "Allows for tailored experiences based on user behavior and preferences."],
+				["Optimization", "Helps identify areas of improvement, leading to higher conversion rates."],
+				["Efficiency", "Reduces the guesswork, saving time and resources."]
+			]
+			},
+			{
+			"type": "heading",
+			"text": "Dark Mode Dominance"
+			},
+			{
+			"type": "paragraph",
+			"text": "Dark mode is not just a fad; it's becoming a standard. More and more users prefer the darker aesthetic for its benefits, such as reducing eye strain and conserving battery life on mobile devices."
+			},
+			{
+			"type": "paragraph",
+			"text": "Incorporating dark mode into your design strategy can significantly enhance the user experience, especially for apps and websites with long user interaction times."
+			},
+			{
+			"type": "heading",
+			"text": "Conclusion"
+			},
+			{
+			"type": "paragraph",
+			"text": "As digital design continues to evolve, staying ahead of these trends will be crucial for designers looking to create future-proof designs. By embracing minimalism, integrating AI, and leveraging data, you'll be well-positioned to deliver innovative and effective digital experiences in the years to come."
+			}
+		],
+		"tags": ["Branding", "Design", "Trends"],
+		"comments": [
+			{
+			"id": 1,
+			"name": "John Doe",
+			"email": "john.doe@example.com",
+			"comment": "Great article! The insights on AI-driven design are really insightful. I'm excited to see where this trend takes us."
+			},
+			{
+			"id": 2,
+			"name": "Jane Smith",
+			"email": "jane.smith@example.com",
+			"comment": "I love the focus on minimalism. It's so refreshing to see design trends leaning towards simplicity."
+			}
+		]
+		}
+	]
+}
