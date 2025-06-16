@@ -30,7 +30,7 @@ A fully headless, custom-designed platform built with React, Strapi, and a light
 
 React.js was selected to deliver a modern, fully custom front-end experience. Strapi serves as a headless CMS, ensuring industry-level content management while allowing 100% bespoke design on the client side.
 
-* **API-First Approach:** Over 90% of site content is fetched via Strapi’s REST APIs, centralizing content for reuse across multiple platforms (websites, mobile apps, etc.).
+* **API-First Approach:** To showcase the suitability and depth of CMS choice, over 95% of site content is fetched via Strapi’s REST APIs, centralizing content for reuse across multiple platforms (websites, mobile apps, etc.).
 * **Headless Flexibility:** Strapi’s dynamic content modeling enables specific and dynamic content use cases accessible via API — ideal for integration with other front ends (e.g., PHP/Laravel).
 * **Enterprise-Scale Options:** For larger deployments or specialized workflows, consider Drupal Headless or Sanity CMS under the same architecture.
 * **Data Visualization:** Implemented using [Recharts](https://recharts.org), a native React.js charting library.
