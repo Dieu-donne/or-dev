@@ -24,7 +24,7 @@ const PortfolioOne = () => {
             <div className="card portfolio-item layout-2 scale has-shadow">
               <div className="image-holder">
                 <a className="card-thumb" href="/">
-                  <img src={`${imageBaseUrl}${item.Image?.url}`} alt={item.Title} />
+                  <img src={`${item.Image?.url}`} alt={item.Title} />
                 </a>
                 <div className="card-overlay">
                   <div className="heading">

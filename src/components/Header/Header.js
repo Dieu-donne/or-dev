@@ -17,7 +17,7 @@ const Header = () => {
   useEffect(() => {
     const apiUrl = process.env.REACT_APP_STRAPI_URL;
     axios
-      .get(`${apiUrl}/api/header-menus`)
+      .get(`${apiUrl}/api/header-menus?sort=order:asc`)
       .then((response) => setHeaderItems(response.data.data))
       .catch((error) => console.error("Error fetching portfolio data:", error));
   }, []);

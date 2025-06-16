@@ -30,7 +30,7 @@ const BlogOne = () => {
 						<div className="image-holder">
 							{/* Card Thumbnail */}
 							<a className="card-thumb" href={`/blog-single/${blog.documentId}`}>
-								<img src={`${imageBaseUrl}${blog.CoverImage?.url}`} alt={blog.Title} />
+								<img src={`${blog.CoverImage?.url}`} alt={blog.Title} />
 							</a>
 							<div className="card-overlay top fade-down">
 								<div className="post-meta d-flex flex-column ms-3">

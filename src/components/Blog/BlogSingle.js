@@ -81,7 +81,7 @@ const BlogSingle = () => {
                 case 'shared.rich-text':
                   return <RichText key={index} markdown={item.body} />;
                 case 'shared.media':
-                  return <div key={index} className="post-thumbnail"><img className="w-100" src={`${imageBaseUrl}${item.file?.url}`} alt={item.file.alternativeText} /></div>;
+                  return <div key={index} className="post-thumbnail"><img className="w-100" src={`${item.file?.url}`} alt={item.file.alternativeText} /></div>;
                 case 'heading':
                   return <h3 key={index}>{item.text}</h3>;
                 case 'list':
@@ -149,8 +149,7 @@ const BlogSingle = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12">
-              <h3 className="comments-reply-text mt-0 mb-3">Leave a Reply</h3>
-              <p className="mt-3">Sed mauris nulla, tempor eu est vel, dapibus hendrerit mauris.</p>
+              <h3 className="comments-reply-text mt-0 mb-3">Leave a Comment</h3>
 
               <form id="contact-form" className="contact-form p-0">
                 <div className="form-floating mb-3">

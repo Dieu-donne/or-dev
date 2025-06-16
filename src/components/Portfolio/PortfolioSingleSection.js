@@ -35,7 +35,7 @@ const PortfolioSingleSection = () => {
         <div className="row justify-content-between">
           <div className="col-12 col-lg-5">
             <div className="heading">
-                <img className="mt-3" src={`${imageBaseUrl}${product.CoverImage?.url}`} alt={`Gallery`} />
+                <img className="mt-3" src={`${product.CoverImage?.url}`} alt={`Gallery`} />
             </div>
           </div>
           <div className="col-12 col-lg-6 items portfolio-meta mt-3 mt-md-0">
@@ -69,7 +69,7 @@ const PortfolioSingleSection = () => {
             {/* Directly render the images from the gallery without animation */}
             {product.OtherImages.map((img, index) => (
               <div key={index} className="item">
-                <img src={`${imageBaseUrl}${img?.url}`} alt={`Gallery ${index + 1}`} />
+                <img src={`${img?.url}`} alt={`Gallery ${index + 1}`} />
               </div>
             ))}
           </div>

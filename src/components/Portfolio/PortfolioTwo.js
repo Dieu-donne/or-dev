@@ -105,7 +105,7 @@ const PortfolioTwo = () => {
                 <div className="image-holder">
                   <a className="card-thumb" href={`/shop-single/${item.documentId}`}>
                     <img
-                      src={`${imageBaseUrl}${item.CoverImage?.url}`}
+                      src={`${item.CoverImage?.url}`}
                       alt={item.Name}
                     />
                   </a>
