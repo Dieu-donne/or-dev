@@ -3,7 +3,7 @@ import PortfolioOne from "./PortfolioOne";
 
 const PortfolioSection = ({ title = "Advocacy Preview", viewAllLink = "/" }) => {
   return (
-    <section className="works position-relative p-0">
+    <section className="works position-relative p-0 mt-5 pt-5">
       <div className="container">
         <div className="row">
           <div className="col-12">

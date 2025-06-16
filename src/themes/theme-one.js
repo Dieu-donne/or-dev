@@ -17,6 +17,7 @@ import LenisScroll from '../components/Header/LenisScroll';
 import Skills from '../components/Skills/Skills';
 import Background3D from '../components/SpinLogo/SpinLogo';
 import { useTheme } from '../context/ThemeContext';
+import VisualChart from '../components/Visual/Visual';
 
 const ThemeOne = () => {
 	const { isDarkMode } = useTheme();
@@ -31,6 +32,7 @@ const ThemeOne = () => {
 				<div id="main-wrapper" className="main-wrapper">
 					<Hero />
 					<Skills />
+					<VisualChart />
 					<Portfolio />
 					<Blog />
 					<Footer />
