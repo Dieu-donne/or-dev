@@ -6,9 +6,12 @@ const SkillsSection = () => {
   const skillsRef = useRef(null);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/themeland/brilio-json-1/skills')
+    const apiUrl = process.env.REACT_APP_STRAPI_URL;
+
+    axios
+    .get(`${apiUrl}/api/global-web-snapshot`)
       .then(response => {
-        setSkillsData(response.data);
+        setSkillsData(response.data.data);
       })
       .catch(error => {
         console.error('Error fetching skills data:', error);
@@ -51,39 +54,56 @@ const SkillsSection = () => {
     <div className="row justify-content-between" ref={skillsRef}>
       <div className="col-12 col-lg-3">
         <div className="intro">
-          <h3 className="title">{skillsData.title}</h3>
+          <h3 className="title">{skillsData.Title}</h3>
         </div>
       </div>
       <div className="col-12 col-lg-8">
         <div className="row items">
-          {skillsData.items.map((item, index) => (
-            <div key={index} className="col-12 col-md-6 item">
+            <div key="1" className="col-12 col-md-6 item">
               <div className="content">
                 <div className="heading d-flex align-items-center">
-                  <i className={`icon ${item.icon}`}></i>
-                  <h2 className="title m-0 ms-2">{item.value}</h2>
+                  <i className={`icon ${skillsData.MetricOneIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData.MetricOneTitle}</h2>
                 </div>
-                <span>{item.label}</span>
-                <p className="mt-3">{item.description}</p>
+                <span>{skillsData.MetricOneSub}</span>
+                <p className="mt-3">{skillsData.MetricOneDesc}</p>
               </div>
             </div>
-          ))}
-          {skillsData.skillsProgress.map((skill, index) => (
-            <div key={index} className="col-12 col-md-6 item align-self-center">
+            <div key="2" className="col-12 col-md-6 item">
+              <div className="content">
+                <div className="heading d-flex align-items-center">
+                  <i className={`icon ${skillsData.MetricTwoIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData.MetricTwoTitle}</h2>
+                </div>
+                <span>{skillsData.MetricTwoSub}</span>
+                <p className="mt-3">{skillsData.MetricTwoDesc}</p>
+              </div>
+            </div>
+            <div key="3" className="col-12 col-md-6 item">
+              <div className="content">
+                <div className="heading d-flex align-items-center">
+                  <i className={`icon ${skillsData.MetricThreeIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData.MetricThreeTitle}</h2>
+                </div>
+                <span>{skillsData.MetricThreeSub}</span>
+                <p className="mt-3">{skillsData.MetricThreeDesc}</p>
+              </div>
+            </div>
+            
+            <div key="4" className="col-12 col-md-6 item align-self-center">
               <div className="content mt-5 mt-md-0">
                 <div className="progress">
-                  <span className="title">{skill.title}</span>
+                  <span className="title">{skillsData.BarTitle}</span>
                   <div
                     className="progress-bar"
-                    data-progress={skill.progress}
+                    data-progress={skillsData.BarPercentage}
                     style={{ opacity: 0, width: '0%' }}
                   >
-                    <span>{skill.progress}%</span>
+                    <span>{skillsData.BarPercentage}%</span>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
         </div>
       </div>
     </div>

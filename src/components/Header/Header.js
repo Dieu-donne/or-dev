@@ -1,15 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { menuItems } from "./menuConfig";
+import axios from "axios";
+import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
   const location = useLocation();
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useTheme();
+  const [headerItems, setHeaderItems] = React.useState([]);
 
   const toggleDarkMode = (e) => {
     e.preventDefault();
     setIsDarkMode(!isDarkMode);
   };
+
+  useEffect(() => {
+    const apiUrl = process.env.REACT_APP_STRAPI_URL;
+    axios
+      .get(`${apiUrl}/api/header-menus`)
+      .then((response) => setHeaderItems(response.data.data))
+      .catch((error) => console.error("Error fetching portfolio data:", error));
+  }, []);
 
   useEffect(() => {
     const body = document.body;
@@ -24,17 +35,14 @@ const Header = () => {
     <header id="header">
       <nav className="navbar navbar-expand">
         <div className="container header">
-          {/* Navbar Brand */}
           <div className="magnetic">
             <a className="navbar-brand" href="/">
-              Brilio.
+              WDYCG.
             </a>
           </div>
           <div className="ms-auto"></div>
-
-          {/* Navbar Nav */}
           <ul className="navbar-nav items d-none d-md-block">
-            {menuItems.map((item, index) => (
+            {headerItems.map((item, index) => (
               <li className="nav-item" key={index}>
                 <a
                   href={item.href}
@@ -63,7 +71,6 @@ const Header = () => {
             </li>
           </ul>
 
-          {/* Navbar Toggler */}
           <div
             className="navbar-toggler scrolled"
             data-bs-toggle="offcanvas"
@@ -78,8 +85,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-
-      <div id="navbar-main" className="main"></div>
     </header>
   );
 };

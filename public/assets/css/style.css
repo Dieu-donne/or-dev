@@ -1623,6 +1623,7 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 }
 .hero-section .intro-text {
   font-size: 20px;
+  margin-left: 1%;
   font-weight: 500;
 }
 .hero-section h1 span {
@@ -1639,6 +1640,9 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
   .hero-section .hero-content .content .sub-title {
     max-width: 100%;
   }
+  .hero-section .intro-text {
+    display: none;
+}
 }
 .hero-section .hero-thumb {
   border-radius: 50rem;
@@ -2233,6 +2237,12 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .portfolio-terms a.terms::after {
   content: ",";
 }
+.content span.terms-auth:last-child::after {
+  content: none !important;
+}
+.content span.terms-auth::after {
+  content: ", " !important;
+}
 .portfolio-terms a.terms:last-child::after {
   content: none;
 }
@@ -2256,9 +2266,12 @@ header .navbar-expand .dropdown:hover > .dropdown-menu {
 .blog-item .card-thumb {
   display: block;
   overflow: hidden;
+  height: 30vh;
 }
 .blog-item .card-thumb img {
   object-fit: cover;
+    width: 100%;              /* fill the container’s width */
+  height: 100%; 
   transition: all var(--transition-function) var(--transition-duration);
 }
 .blog-item .card-content .post-meta span,

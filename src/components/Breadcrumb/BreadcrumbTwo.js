@@ -2,8 +2,7 @@ import React from 'react';
 
 const BreadcrumbTwo = () => {
   const breadcrumbContent = {
-    title: "Showcasing innovation",
-    subheading: "and expertise"
+    title: "Shop WDYCG",
   };
 
   return (
@@ -14,7 +13,6 @@ const BreadcrumbTwo = () => {
             <div className="content w-60">
               <h1 className="title">{breadcrumbContent.title}</h1>
               <div className="flex ms-auto">
-                <span className="line animate-line"></span>
                 <h1 className="title">{breadcrumbContent.subheading}</h1>
               </div>
             </div>

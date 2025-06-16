@@ -1,9 +1,33 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import { menuItems, socialLinks } from "../Header/menuConfig";
+import axios from "axios";
+
 
 const OffcanvasMenu = ({ className = "offcanvas-wrapper" }) => {
   const location = useLocation(); // Get current URL path
+  const [headerItems, setHeaderItems] = useState([]);
+  const [socials, setSocials] = useState([]);
+
+  useEffect(() => {
+    const apiUrl = process.env.REACT_APP_STRAPI_URL;
+    console.log('Talking to API at', apiUrl);
+    axios
+      .get(`${apiUrl}/api/header-menus`)
+      .then((response) => setHeaderItems(response.data.data))
+      .catch((error) => console.error("Error fetching portfolio data:", error));
+
+  }, []);
+
+  useEffect(() => {
+    const apiUrl = process.env.REACT_APP_STRAPI_URL;
+    console.log('Talking to API at', apiUrl);
+    axios
+      .get(`${apiUrl}/api/social-media-links`)
+      .then((response) => setSocials(response.data.data))
+      .catch((error) => console.error("Error fetching portfolio data:", error));
+
+  }, []);
 
   return (
     <div className={className}>
@@ -37,7 +61,7 @@ const OffcanvasMenu = ({ className = "offcanvas-wrapper" }) => {
             {/* Navigation Menu */}
             <div className="offcanvas-body">
               <ul className="navbar-nav menu pt-md-4">
-                {menuItems.map((item, index) => (
+                {headerItems.map((item, index) => (
                   <li className="nav-item" key={index}>
 					<a href={item.href} className={`nav-link ${location.pathname === item.href ? "active" : ""}`}>
 						{item.label} <span className="item-count">({index + 1})</span>
@@ -59,8 +83,8 @@ const OffcanvasMenu = ({ className = "offcanvas-wrapper" }) => {
             {/* Socials */}
             <div className="socials offcanvas-body">
               <nav className="nav">
-                {socialLinks.map((social, index) => (
-                  <a className="nav-link swap-icon" href={social.href} key={index}>
+                {socials.map((social, index) => (
+                  <a className="nav-link swap-icon" href={social.link} key={index}>
                     {social.label} <i className="icon rotate bi bi-arrow-right-short"></i>
                   </a>
                 ))}

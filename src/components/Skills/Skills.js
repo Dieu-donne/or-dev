@@ -4,15 +4,15 @@ import AwardsTwo from '../Awards/AwardsTwo';
 
 const Skills = () => {
   return (
-    <section className="awards skills sticky primary-bg">
+    <section className="awards skills sticky">
       <div className="container">
         {/* Skills Section */}
         <SkillsSection />
 
         <hr />
 
-        {/* Awards Section */}
-        <AwardsTwo />
+        {/* Awards Section 
+        <AwardsTwo />*/}
       </div>
     </section>
   );

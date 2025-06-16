@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import MagneticButton from '../Miscellaneous/MagneticButton';
 import BlogSection from '../Blog/BlogRelated';
+import { RichText } from '../Markdown/Markdown';
 
 const BlogSingle = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+  const imageBaseUrl = process.env.REACT_APP_STRAPI_URL;
 
   useEffect(() => {
+    const apiUrl = process.env.REACT_APP_STRAPI_URL;
+
     // Fetch post data using axios
     axios
-      .get('https://my-json-server.typicode.com/themeland/brilio-json-2/blogSingle')
+      .get(`${apiUrl}/api/blog-post-dynamics/${id}?populate[Content][on][shared.rich-text][populate]=true&populate[Content][on][shared.media][populate]=file&populate[CoverImage]=true&populate[blog_tags]=true&populate[authors]=true`)
       .then((response) => {
-        setPost(response.data[0]); // Assuming response.data is an array
+        setPost(response.data.data); // Assuming response.data is an array
         setLoading(false);
       })
       .catch((error) => {
@@ -22,6 +28,7 @@ const BlogSingle = () => {
   }, []);
 
   if (loading) return <div>Loading...</div>;
+  console.log('hello', post);
 
   return (
     <section className="blog-single pb-0">
@@ -31,28 +38,29 @@ const BlogSingle = () => {
             {/* Post Meta */}
             <div className="portfolio-meta d-flex align-items-center">
               <div className="portfolio-terms">
-                {post.tags.map((tag, index) => (
+                {post.blog_tags.map((tag, index) => (
                   <a key={index} className="terms" href="/blog">
-                    {tag}
+                    {tag.Title}
                   </a>
                 ))}
               </div>
-              <span className="date">4 mins read</span>
+              <span className="date">{post.ReadLength}</span>
             </div>
-            <h2 className="title">{post.title}</h2>
+            <h2 className="title">{post.Title}</h2>
             {/* Meta Content */}
             <div className="content item d-flex flex-column flex-md-row">
               <div className="author d-flex align-items-start">
-                <img src="/img/logo.png" alt="Author" />
-                <div className="content ms-3">
+                <div className="content">
                   <h6 className="title mt-0 mb-2">Author</h6>
-                  <span><strong>{post.author}</strong></span>
+                    {post.authors.map((tag, index) => (
+                      <span className="terms-auth"><strong>{tag.name}</strong></span>
+                    ))}
                 </div>
               </div>
 
               <div className="published ms-sm-4 my-3 my-sm-0">
                 <h6 className="title mt-0 mb-2">Published</h6>
-                <span>{post.date}</span>
+                <span>{post.Date}</span>
               </div>
 
               <div className="comments socials ms-sm-4">
@@ -68,12 +76,12 @@ const BlogSingle = () => {
         {/* Post Content */}
         <div className="row justify-content-center portfolio-content">
           <div className="col-12">
-            {post.content.map((item, index) => {
-              switch (item.type) {
-                case 'paragraph':
-                  return <p key={index}>{item.text}</p>;
-                case 'image':
-                  return <div key={index} className="post-thumbnail"><img className="w-100" src={item.src} alt={item.alt} /></div>;
+            {post.Content.map((item, index) => {
+              switch (item.__component) {
+                case 'shared.rich-text':
+                  return <RichText key={index} markdown={item.body} />;
+                case 'shared.media':
+                  return <div key={index} className="post-thumbnail"><img className="w-100" src={`${imageBaseUrl}${item.file?.url}`} alt={item.file.alternativeText} /></div>;
                 case 'heading':
                   return <h3 key={index}>{item.text}</h3>;
                 case 'list':
@@ -118,19 +126,20 @@ const BlogSingle = () => {
               }
             })}
 
-            {/* Tags */}
+            {/* Tag Section */}
             <div className="post-holder-tags d-flex flex-column flex-md-row align-items-md-center mt-5">
               <span className="tagged">Tagged with:</span>
               <div className="tags mt-2 mt-sm-0 ms-sm-3">
-                {post.tags.map((tag, index) => (
+                {post.blog_tags.map((tag, index) => (
                   <a key={index} className="badge mx-md-1" href="/blog" rel="tag">
-                    {tag}
+                    {tag.Title}
                   </a>
                 ))}
               </div>
             </div>
           </div>
         </div>
+         
       </div>
 
 	  <BlogSection />
@@ -156,11 +165,11 @@ const BlogSingle = () => {
                   <textarea className="form-control" id="comment" placeholder="Leave a comment here" style={{ height: '100px' }}></textarea>
                   <label htmlFor="comment">Comment</label>
                 </div>
-				<MagneticButton 
-					href="/#"
-					>
-					Post Comment
-				</MagneticButton>
+              <MagneticButton 
+                href="/#"
+                >
+                Post Comment
+              </MagneticButton>
               </form>
             </div>
           </div>

@@ -20,7 +20,6 @@ const Contact = () => {
 			<div className="main">
 				<Header />
 				<div id="main-wrapper" className="main-wrapper">
-					<Breadcrumb />
 					<Shape />
 					<Form />
 					<Footer className = "footer-area bg-white" />

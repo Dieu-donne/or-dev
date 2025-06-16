@@ -20,7 +20,6 @@ const PortfolioSingle = () => {
 				<Header />
 				<div id="main-wrapper" className="main-wrapper">
 					<PortfolioSection />
-					<CTA />
 					<Footer />
 					<SearchModal />
 					<OffcanvasMenu />

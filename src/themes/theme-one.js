@@ -14,8 +14,12 @@ import SearchModal from '../components/Miscellaneous/SearchModal';
 import OffcanvasMenu from '../components/Miscellaneous/OffcanvasMenu';
 import MagicCursor from '../components/Miscellaneous/MagicCursor';
 import LenisScroll from '../components/Header/LenisScroll';
+import Skills from '../components/Skills/Skills';
+import Background3D from '../components/SpinLogo/SpinLogo';
+import { useTheme } from '../context/ThemeContext';
 
 const ThemeOne = () => {
+	const { isDarkMode } = useTheme();
     return (
         <div>
 			<MagicCursor />
@@ -23,14 +27,12 @@ const ThemeOne = () => {
 			<LenisScroll />
 			<div className="main">
 				<Header />
+				<Background3D isDarkMode={isDarkMode} />
 				<div id="main-wrapper" className="main-wrapper">
 					<Hero />
+					<Skills />
 					<Portfolio />
-					<AboutSection />
-					<Shape />
-					<Awards />
 					<Blog />
-					<CTA />
 					<Footer />
 					<SearchModal />
 					<OffcanvasMenu />

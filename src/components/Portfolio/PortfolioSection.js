@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioOne from "./PortfolioOne";
 
-const PortfolioSection = ({ title = "Selected Works", viewAllLink = "/portfolio" }) => {
+const PortfolioSection = ({ title = "Advocacy Preview", viewAllLink = "/" }) => {
   return (
     <section className="works position-relative p-0">
       <div className="container">

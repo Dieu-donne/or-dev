@@ -5,6 +5,7 @@ import MagneticButton from '../Miscellaneous/MagneticButton';
 const CTAOne = () => {
 	const [ctaData, setCtaData] = useState(null);
 	const [loading, setLoading] = useState(true);
+  	const [socials, setSocials] = useState([]);
 
 	useEffect(() => {
 		axios
@@ -18,6 +19,16 @@ const CTAOne = () => {
 			console.error("Error fetching CTA data:", error);
 			setLoading(false);
 		});
+	}, []);
+
+	useEffect(() => {
+		const apiUrl = process.env.REACT_APP_STRAPI_URL;
+		console.log('Talking to API at', apiUrl);
+		axios
+		.get(`${apiUrl}/api/social-media-links`)
+		.then((response) => setSocials(response.data.data))
+		.catch((error) => console.error("Error fetching portfolio data:", error));
+
 	}, []);
 
 	if (loading) return <p>Loading CTA...</p>;
@@ -42,10 +53,10 @@ const CTAOne = () => {
 						{/* Socials */}
 						<div className="socials mt-5">
 							<nav className="nav justify-content-center">
-								{ctaData.socials?.length > 0 ? (
-								ctaData.socials.map((social, index) => (
+								{socials?.length > 0 ? (
+								socials.map((social, index) => (
 									<a key={index} className="nav-link swap-icon" href={social.link}>
-									{social.name} <i className="icon rotate bi bi-arrow-right-short"></i>
+									{social.label} <i className="icon rotate bi bi-arrow-right-short"></i>
 									</a>
 								))
 								) : (

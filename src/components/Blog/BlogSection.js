@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogOne from './BlogOne';
 
-const BlogSection = ({ title = "Insights", viewAllLink = "/blog" }) => {
+const BlogSection = ({ title = "Further Insights", viewAllLink = "/blog" }) => {
 return (
 	<section className="blog">
 		<div className="container">

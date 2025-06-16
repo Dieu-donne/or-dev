@@ -1,12 +1,12 @@
 import React from 'react';
-import BlogTwo from './BlogTwo';
+import BlogOne from './BlogOne';
 
 const BlogSection = ({ title = "Insights", viewAllLink = "/blog" }) => {
 return (
 	<section className="blog pt-0">
 		<div className="container">
 			{/* BlogOne Component */}
-			<BlogTwo />
+			<BlogOne />
 		</div>
 	</section>
 );

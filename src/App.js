@@ -1,12 +1,13 @@
 import React from 'react';
-
-// importing MyRouts where we located all of our theme
 import MyRouts from './routers/routes';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
     <div>
-      <MyRouts />
+      <ThemeProvider>
+        <MyRouts />
+      </ThemeProvider>
     </div>
   );
 }
