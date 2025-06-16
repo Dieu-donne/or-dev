@@ -52,7 +52,7 @@ const PortfolioSingleSection = () => {
                     </a>
                 </div>
               </div>
-              <div className="client my-3 mx-5 my-md-0">
+              <div className="client my-3 mx-0 mx-md-5 my-md-0">
                 <h6 className="title mt-0 mb-1 mb-md-3">Color</h6>
                 <span>{product.Color}</span>
               </div>
