@@ -379,20 +379,6 @@ a:not([href]) i,
 a:not([href]) i:hover {
   color: var(--primary-b-color);
 }
-@media screen and (max-width: 768px) {
-  .navbar-nav.items,
-  .navbar-nav.icons {
-    display: none !important;
-  }
-
-  .navbar-toggler {
-    display: flex;
-  }
-
-  .navbar .navbar-brand {
-    font-size: 1.5rem;
-  }
-}
 
 p {
   margin: 1.5rem 0;
