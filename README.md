@@ -2,6 +2,8 @@
 
 # WDYCG (Where Do Your Clothes Go – To Die)
 
+> **Note:** Server side access restrictions may cause in delay in initial content loading due to the API meeting unauthorized feedback.
+
 A fully headless, custom-designed platform built with React, Strapi, and a lightweight Node.js/SQLite backend.
 
 ---
