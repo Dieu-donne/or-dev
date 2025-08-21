@@ -1,7 +1,25 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
-const SkillsSection = () => {
+const SkillsSection = ({ 
+
+  Title             = "A Snapshot of the Narratives",
+  SubTitle          = "",
+  MetricOneTitle    = "80%+",
+  MetricOneSub      = "of secondhand clothing",
+  MetricOneDesc     = "is exported from the Global North to markets like Ghana, often under the guise of donation—but most of it is waste.",
+  MetricTwoTitle    = "60+ million",
+  MetricTwoSub      = "garments arrive annually",
+  MetricTwoDesc     = "at Kantamanto Market in Accra, Ghana. Much of it is unsellable, dumped in landfills, burned, or chokes the local environment.",
+  MetricThreeTitle  = "30,000+",
+  MetricThreeSub    = "repairers and resellers",
+  MetricThreeDesc   = "work daily in Kantamanto to mend and repurpose clothing discarded by the North. They are the real circular economy.",
+  BarTitle          = "Policy Advancement",
+  BarPercentage     = "60",
+  MetricOneIcon     = "bi bi-person-standing-dress",
+  MetricTwoIcon     = "bi bi-truck",
+  MetricThreeIcon   = "bi bi-arrow-repeat",
+}) => {
   const [skillsData, setSkillsData] = useState(null);
   const skillsRef = useRef(null);
 
@@ -46,15 +64,12 @@ const SkillsSection = () => {
     };
   }, [skillsData]);
 
-  if (!skillsData) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="row justify-content-between" ref={skillsRef}>
       <div className="col-12 col-lg-3">
         <div className="intro">
-          <h3 className="title">{skillsData.Title}</h3>
+          <h3 className="title">{skillsData?.Title || Title}</h3>
         </div>
       </div>
       <div className="col-12 col-lg-8">
@@ -62,44 +77,44 @@ const SkillsSection = () => {
             <div key="1" className="col-12 col-md-6 item">
               <div className="content">
                 <div className="heading d-flex align-items-center">
-                  <i className={`icon ${skillsData.MetricOneIcon}`}></i>
-                  <h2 className="title m-0 ms-2">{skillsData.MetricOneTitle}</h2>
+                  <i className={`icon ${skillsData?.MetricOneIcon || MetricOneIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData?.MetricOneTitle || MetricOneTitle}</h2>
                 </div>
-                <span>{skillsData.MetricOneSub}</span>
-                <p className="mt-3">{skillsData.MetricOneDesc}</p>
+                <span>{skillsData?.MetricOneSub || MetricOneSub}</span>
+                <p className="mt-3">{skillsData?.MetricOneDesc || MetricOneDesc}</p>
               </div>
             </div>
             <div key="2" className="col-12 col-md-6 item">
               <div className="content">
                 <div className="heading d-flex align-items-center">
-                  <i className={`icon ${skillsData.MetricTwoIcon}`}></i>
-                  <h2 className="title m-0 ms-2">{skillsData.MetricTwoTitle}</h2>
+                  <i className={`icon ${skillsData?.MetricTwoIcon || MetricTwoIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData?.MetricTwoTitle || MetricTwoTitle}</h2>
                 </div>
-                <span>{skillsData.MetricTwoSub}</span>
-                <p className="mt-3">{skillsData.MetricTwoDesc}</p>
+                <span>{skillsData?.MetricTwoSub || MetricTwoSub}</span>
+                <p className="mt-3">{skillsData?.MetricTwoDesc || MetricTwoDesc}</p>
               </div>
             </div>
             <div key="3" className="col-12 col-md-6 item">
               <div className="content">
                 <div className="heading d-flex align-items-center">
-                  <i className={`icon ${skillsData.MetricThreeIcon}`}></i>
-                  <h2 className="title m-0 ms-2">{skillsData.MetricThreeTitle}</h2>
+                  <i className={`icon ${skillsData?.MetricThreeIcon || MetricThreeIcon}`}></i>
+                  <h2 className="title m-0 ms-2">{skillsData?.MetricThreeTitle || MetricThreeTitle}</h2>
                 </div>
-                <span>{skillsData.MetricThreeSub}</span>
-                <p className="mt-3">{skillsData.MetricThreeDesc}</p>
+                <span>{skillsData?.MetricThreeSub || MetricThreeSub}</span>
+                <p className="mt-3">{skillsData?.MetricThreeDesc || MetricThreeDesc}</p>
               </div>
             </div>
             
             <div key="4" className="col-12 col-md-6 item align-self-center">
               <div className="content mt-5 mt-md-0">
                 <div className="progress">
-                  <span className="title">{skillsData.BarTitle}</span>
+                  <span className="title">{skillsData?.BarTitle || BarTitle}</span>
                   <div
                     className="progress-bar"
-                    data-progress={skillsData.BarPercentage}
+                    data-progress={skillsData?.BarPercentage || BarPercentage}
                     style={{ opacity: 0, width: '0%' }}
                   >
-                    <span>{skillsData.BarPercentage}%</span>
+                    <span>{skillsData?.BarPercentage || BarPercentage}%</span>
                   </div>
                 </div>
               </div>

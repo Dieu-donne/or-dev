@@ -16,6 +16,7 @@ const PortfolioOne = () => {
   }, []);
       console.log(portfolioItems);
 
+       if (!portfolioItems) return null;
   return (
     <div className="row">
       <div className="stack-wrapper">

@@ -20,6 +20,7 @@ const BlogOne = () => {
 		});
 	}, []);
       console.log(blogs);
+     if (!blogs) return null;
 
 	return (
 		<div className="row items">
@@ -50,7 +51,7 @@ const BlogOne = () => {
 									</span>
 								</div>
 								<h4 className="title my-2">
-									<a href={blog.link}>{blog.Title}</a>
+									<a href={`/blog-single/${blog.documentId}`}>{blog.Title}</a>
 								</h4>
 								<div className="card-terms">
 									{blog.blog_tags.map((category, index) => (

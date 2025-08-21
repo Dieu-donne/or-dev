@@ -14,6 +14,7 @@ const Footer = ({ className = "footer-area", scrollToTopText = "Scroll to Top", 
       .catch((error) => console.error("Error fetching portfolio data:", error));
 
   }, []);
+     if (!footerItems) return null;
 	
 	return (
 		<footer className={`${className}`}>
