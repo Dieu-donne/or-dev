@@ -1,4 +1,4 @@
-# or-dev
+# or-dev [Not Maintained]
 
 # WDYCG (Where Do Your Clothes Go – To Die)
 
